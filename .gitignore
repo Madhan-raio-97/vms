@@ -1,0 +1,62 @@
+# Ignore pycache files
+__pycache__/
+.pytest_cache/
+
+# Ignore environment-specific settings (e.g., settings/local.py)
+#*.env
+
+# Ignore database files
+db.sqlite3
+*.sqlite3
+
+# Ignore migration files
+*/migrations/
+
+# Ignore logs and other generated files
+*.log
+*.pot
+*.pyc
+*.bak
+
+# Ignore static and media files
+# /staticfiles/
+/media/
+/assets/
+
+# Ignore virtual environment directories
+venv/
+.env/
+
+# Ignore IDE-specific files
+.idea/
+.pycharm/
+.vscode/
+
+# Ignore OS and text editor temporary files
+*.swp
+.DS_Store
+
+# Ignore Docker and Compose files
+docker-compose.yml
+Dockerfile
+
+# Ignore compiled Python files
+*.pyc
+*.pyo
+*.pyd
+
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore Pyright static type checking files
+.pyright/
+
+# Ignore logs and generated files from web frameworks (e.g., Flask)
+*.log
+*.pot
+*.pyc
+
+# Ignore pytest cache and test results
+.pytest_cache/
+pytest-reports/
