@@ -38,7 +38,7 @@ Once `pip` has finished downloading the dependencies:
 Start migrations:
 
 ```sh
-(env)$ cd vms
-(env)$ python manage.py makemigrations
-(env)$ python manage.py migrate
+(venv)$ cd vms
+(venv)$ python manage.py makemigrations
+(venv)$ python manage.py migrate
 ```
