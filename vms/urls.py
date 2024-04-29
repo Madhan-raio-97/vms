@@ -3,6 +3,7 @@ from django.urls import path, include
 from vendor.views import VendorListCreateAPIView, VendorRetrieveUpdateDestroyAPIView, VendorPerformanceAPIView, AcknowledgePurchaseOrderAPIView
 from purchaseorder.views import PurchaseOrderListCreateAPIView, PurchaseOrderRetrieveUpdateDestroyAPIView
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('auth/', include('rest_framework.urls')),

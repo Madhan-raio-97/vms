@@ -1,6 +1,6 @@
 from django.db import models
 from django.db.models import Sum
-from vendor.models import Vendor  # Assuming Vendor model is in a 'vendor' app
+from vendor.models import Vendor
 from vendor.models import HistoricalPerformance
 from django.db.models.signals import post_save, pre_save
 from django.dispatch import receiver
@@ -24,6 +24,7 @@ class PurchaseOrder(models.Model):
     quality_rating = models.FloatField(null=True, blank=True)
     issue_date = models.DateTimeField(default=timezone.now)
     acknowledgment_date = models.DateTimeField(null=True, blank=True)
+
 
     def __str__(self):
         return self.po_number
