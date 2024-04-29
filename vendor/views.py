@@ -1,4 +1,5 @@
 from rest_framework import generics, permissions, status
+from django.utils import timezone
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.generics import ListAPIView, CreateAPIView
@@ -58,7 +59,11 @@ class VendorPerformanceAPIView(generics.RetrieveAPIView):
                 return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class AcknowledgePurchaseOrderAPIView(APIView):
+    authentication_classes = [TokenAuthentication, SessionAuthentication]
+    permission_classes = [permissions.IsAuthenticated]
+
     def post(self, request, po_id):
+        from purchaseorder.models import PurchaseOrder
         purchase_order = PurchaseOrder.objects.get(pk=po_id)
         purchase_order.acknowledgment_date = timezone.now()
         purchase_order.save()
