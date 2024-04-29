@@ -1,7 +1,6 @@
 from django.db import models
 from django.db.models import Sum
-from vendor.models import Vendor
-from vendor.models import HistoricalPerformance
+from vendor.models import Vendor, HistoricalPerformance
 from django.db.models.signals import post_save, pre_save
 from django.dispatch import receiver
 from django.utils import timezone
