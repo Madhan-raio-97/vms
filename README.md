@@ -42,3 +42,17 @@ Start migrations:
 (venv)$ python manage.py makemigrations
 (venv)$ python manage.py migrate
 ```
+Create SuperUser For Authentication purpose:
+
+```sh
+(venv)$ cd vms
+(venv)$ python manage.py createsuperuser
+```
+Now Run Project:
+
+```sh
+(venv)$ cd vms
+(venv)$ python manage.py runserver
+```
+
+Now Check the browser: http://localhost:8000/auth/login/

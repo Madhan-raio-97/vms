@@ -94,7 +94,7 @@ class VendorPerformanceAPIViewTest(APITestCase):
         self.user = User.objects.create_user(username='testuser', password='testpassword')
         self.token = Token.objects.create(user=self.user)
         self.client.credentials(HTTP_AUTHORIZATION='Token ' + self.token.key)
-        self.vendor = Vendor.objects.create(name='KDS Technologies', contact_details='support@tdstech.com')
+        self.vendor = Vendor.objects.create(name='KDS Technologies', contact_details='support@tdsrtech.com')
         self.purchase_order = PurchaseOrder.objects.create(
             vendor=self.vendor,
             po_number="PO123",
