@@ -1,7 +1,10 @@
 from django.contrib import admin
 from django.urls import path, include
-from vendor.views import VendorListCreateAPIView, VendorRetrieveUpdateDestroyAPIView, VendorPerformanceAPIView, AcknowledgePurchaseOrderAPIView
-from purchaseorder.views import PurchaseOrderListCreateAPIView, PurchaseOrderRetrieveUpdateDestroyAPIView
+from vendor.views import \
+    VendorListCreateAPIView, VendorRetrieveUpdateDestroyAPIView,\
+    VendorPerformanceAPIView, AcknowledgePurchaseOrderAPIView
+from purchaseorder.views import \
+    PurchaseOrderListCreateAPIView, PurchaseOrderRetrieveUpdateDestroyAPIView
 
 
 urlpatterns = [

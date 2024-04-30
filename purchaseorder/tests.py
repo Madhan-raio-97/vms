@@ -11,7 +11,7 @@ class PurchaseOrderAPITestCase(APITestCase):
         self.user = User.objects.create_user(username='testuser', password='testpassword')
         self.token = Token.objects.create(user=self.user)
         self.client.credentials(HTTP_AUTHORIZATION='Token ' + self.token.key)
-        self.vendor = Vendor.objects.create(name='TDS Technologies', contact_details='support@tdstech.com')
+        self.vendor = Vendor.objects.create(name='TDS Technologies', contact_details='support@tdstech.com', vendor_code='VENDOR019', address="678 Oak Lane, Riverdale, USA")
         self.po_data = {
             "po_number": "PO123",
             "vendor": self.vendor,
@@ -62,7 +62,7 @@ class AcknowledgePurchaseOrderAPIViewTest(APITestCase):
         self.user = User.objects.create_user(username='testuser', password='testpassword')
         self.token = Token.objects.create(user=self.user)
         self.client.credentials(HTTP_AUTHORIZATION='Token ' + self.token.key)
-        self.vendor = Vendor.objects.create(name='TDS Technologies', contact_details='support@tdstech.com')
+        self.vendor = Vendor.objects.create(name='TDS Technologies', contact_details='support@tdstech.com', vendor_code='VENDOR019', address="678 Oak Lane, Riverdale, USA")
         self.po_data = {
             "po_number": "PO123",
             "vendor": self.vendor,

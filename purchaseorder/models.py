@@ -28,6 +28,17 @@ class PurchaseOrder(models.Model):
     def __str__(self):
         return self.po_number
 
+    def clean(self):
+        if self.delivery_date < self.order_date:
+            raise ValidationError("Delivery date cannot be before order date")
+
+        if self.quantity <= 0:
+            raise ValidationError("Quantity must be a positive integer")
+
+    def save(self, *args, **kwargs):
+        self.full_clean()  # Perform full validation before saving
+        super().save(*args, **kwargs)
+
 @receiver(pre_save, sender=PurchaseOrder)
 def update_acknowledgment_date(sender, instance, **kwargs):
     if instance.pk:  # Only update when the instance already exists

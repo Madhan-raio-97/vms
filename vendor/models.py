@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.db.models import Avg, Count
+from django.core.exceptions import ValidationError
 
 
 class Vendor(models.Model):
@@ -16,6 +17,19 @@ class Vendor(models.Model):
 
     def __str__(self):
         return self.name
+
+    
+    def clean(self):
+
+        if self.average_response_time > self.on_time_delivery_rate:
+            raise ValidationError("Average response time cannot be greater than on-time delivery rate")
+        
+        if not 0 <= self.fulfillment_rate <= 100:
+            raise ValidationError("Fulfillment rate must be between 0 and 100")
+
+    def save(self, *args, **kwargs):
+        self.full_clean()  # Perform full validation before saving
+        super().save(*args, **kwargs)
 
 
     def calculate_vendor_performance_metrics(self):
@@ -70,3 +84,24 @@ class HistoricalPerformance(models.Model):
 
     def __str__(self):
         return f"{self.vendor.name} - {self.date}"
+
+    
+    def clean(self):
+        if self.date > timezone.now():
+            raise ValidationError("Date cannot be in the future")
+
+        if not 0 <= self.on_time_delivery_rate <= 100:
+            raise ValidationError("On-time delivery rate must be between 0 and 100")
+
+        if not 0 <= self.quality_rating_avg <= 100:
+            raise ValidationError("Quality rating average must be between 0 and 100")
+
+        if self.average_response_time < 0:
+            raise ValidationError("Average response time cannot be negative")
+
+        if not 0 <= self.fulfillment_rate <= 100:
+            raise ValidationError("Fulfillment rate must be between 0 and 100")
+
+    def save(self, *args, **kwargs):
+        self.full_clean()  # Perform full validation before saving
+        super().save(*args, **kwargs)
