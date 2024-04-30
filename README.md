@@ -39,7 +39,8 @@ Start migrations:
 
 ```sh
 (venv)$ cd vms
-(venv)$ python manage.py makemigrations
+(venv)$ python manage.py makemigrations vendor
+(venv)$ python manage.py makemigrations purchaseorder
 (venv)$ python manage.py migrate
 ```
 Create SuperUser For Authentication purpose:

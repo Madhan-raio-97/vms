@@ -17,6 +17,8 @@ ALLOWED_HOSTS = []
 
 TIME_ZONE = 'Asia/Kolkata'
 
+LOGIN_REDIRECT_URL = '/api/vendors/'
+
 
 # Application definition
 
