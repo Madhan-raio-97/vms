@@ -1,0 +1,282 @@
+[
+    {
+       "model":"vendor.vendor",
+       "pk":1,
+       "fields":{
+          "name":"ABC Electronics",
+          "contact_details":"contact@abcelectronics.com",
+          "address":"123 Main Street, Cityville, USA",
+          "vendor_code":"VENDOR001",
+          "on_time_delivery_rate":0.0,
+          "quality_rating_avg":0.0,
+          "average_response_time":0.0,
+          "fulfillment_rate":0.0
+       }
+    },
+    {
+       "model":"vendor.vendor",
+       "pk":2,
+       "fields":{
+          "name":"XYZ Supplies",
+          "contact_details":"info@xyzsupplies.com",
+          "address":"456 Oak Avenue, Townsville, USA",
+          "vendor_code":"VENDOR002",
+          "on_time_delivery_rate":0.0,
+          "quality_rating_avg":0.0,
+          "average_response_time":0.0,
+          "fulfillment_rate":0.0
+       }
+    },
+    {
+       "model":"vendor.vendor",
+       "pk":3,
+       "fields":{
+          "name":"PQR Technologies",
+          "contact_details":"support@pqrtech.com",
+          "address":"789 Elm Street, Villagetown, USA",
+          "vendor_code":"VENDOR003",
+          "on_time_delivery_rate":0.0,
+          "quality_rating_avg":0.0,
+          "average_response_time":0.0,
+          "fulfillment_rate":0.0
+       }
+    },
+    {
+       "model":"vendor.vendor",
+       "pk":4,
+       "fields":{
+          "name":"RQR Technologies",
+          "contact_details":"support@rqrtech.com",
+          "address":"786 Eli Street, Villagetown, USA",
+          "vendor_code":"VENDOR004",
+          "on_time_delivery_rate":0.0,
+          "quality_rating_avg":0.0,
+          "average_response_time":0.0,
+          "fulfillment_rate":0.0
+       }
+    },
+    {
+       "model":"vendor.vendor",
+       "pk":5,
+       "fields":{
+          "name":"LMN Tech Solutions",
+          "contact_details":"info@lmntech.com",
+          "address":"567 Pine Road, Hamletville, USA",
+          "vendor_code":"VENDOR005",
+          "on_time_delivery_rate":0.0,
+          "quality_rating_avg":0.0,
+          "average_response_time":0.0,
+          "fulfillment_rate":0.0
+       }
+    },
+    {
+       "model":"vendor.vendor",
+       "pk":6,
+       "fields":{
+          "name":"EFG Electronics",
+          "contact_details":"contact@efgelectronics.com",
+          "address":"890 Cedar Lane, Riverside, USA",
+          "vendor_code":"VENDOR006",
+          "on_time_delivery_rate":0.0,
+          "quality_rating_avg":0.0,
+          "average_response_time":0.0,
+          "fulfillment_rate":0.0
+       }
+    },
+    {
+       "model":"vendor.vendor",
+       "pk":7,
+       "fields":{
+          "name":"IJK Solutions",
+          "contact_details":"info@ijksolutions.com",
+          "address":"234 Birch Street, Lakeside, USA",
+          "vendor_code":"VENDOR007",
+          "on_time_delivery_rate":0.0,
+          "quality_rating_avg":0.0,
+          "average_response_time":0.0,
+          "fulfillment_rate":0.0
+       }
+    },
+    {
+       "model":"vendor.vendor",
+       "pk":8,
+       "fields":{
+          "name":"OPQ Technologies",
+          "contact_details":"support@opqtech.com",
+          "address":"789 Maple Avenue, Hilltown, USA",
+          "vendor_code":"VENDOR008",
+          "on_time_delivery_rate":0.0,
+          "quality_rating_avg":0.0,
+          "average_response_time":0.0,
+          "fulfillment_rate":0.0
+       }
+    },
+    {
+       "model":"vendor.vendor",
+       "pk":9,
+       "fields":{
+          "name":"STU Supplies",
+          "contact_details":"info@stusupplies.com",
+          "address":"123 Cherry Lane, Valleytown, USA",
+          "vendor_code":"VENDOR009",
+          "on_time_delivery_rate":0.0,
+          "quality_rating_avg":0.0,
+          "average_response_time":0.0,
+          "fulfillment_rate":0.0
+       }
+    },
+    {
+       "model":"vendor.vendor",
+       "pk":10,
+       "fields":{
+          "name":"VWX Electronics",
+          "contact_details":"contact@vwxelectronics.com",
+          "address":"456 Cedar Street, Mountaintown, USA",
+          "vendor_code":"VENDOR010",
+          "on_time_delivery_rate":0.0,
+          "quality_rating_avg":0.0,
+          "average_response_time":0.0,
+          "fulfillment_rate":0.0
+       }
+    },
+    {
+       "model":"vendor.vendor",
+       "pk":11,
+       "fields":{
+          "name":"RST Technologies",
+          "contact_details":"support@rsttech.com",
+          "address":"789 Birch Road, Hillville, USA",
+          "vendor_code":"VENDOR011",
+          "on_time_delivery_rate":0.0,
+          "quality_rating_avg":0.0,
+          "average_response_time":0.0,
+          "fulfillment_rate":0.0
+       }
+    },
+    {
+       "model":"vendor.vendor",
+       "pk":12,
+       "fields":{
+          "name":"GHI Solutions",
+          "contact_details":"info@ghisolutions.com",
+          "address":"567 Elm Lane, Beachtown, USA",
+          "vendor_code":"VENDOR012",
+          "on_time_delivery_rate":0.0,
+          "quality_rating_avg":0.0,
+          "average_response_time":0.0,
+          "fulfillment_rate":0.0
+       }
+    },
+    {
+       "model":"vendor.vendor",
+       "pk":13,
+       "fields":{
+          "name":"JKL Electronics",
+          "contact_details":"contact@jklelectronics.com",
+          "address":"890 Oak Street, Fieldtown, USA",
+          "vendor_code":"VENDOR013",
+          "on_time_delivery_rate":0.0,
+          "quality_rating_avg":0.0,
+          "average_response_time":0.0,
+          "fulfillment_rate":0.0
+       }
+    },
+    {
+       "model":"vendor.vendor",
+       "pk":14,
+       "fields":{
+          "name":"MNO Supplies",
+          "contact_details":"info@mnosupplies.com",
+          "address":"234 Maple Road, Orchardtown, USA",
+          "vendor_code":"VENDOR014",
+          "on_time_delivery_rate":0.0,
+          "quality_rating_avg":0.0,
+          "average_response_time":0.0,
+          "fulfillment_rate":0.0
+       }
+    },
+    {
+        "model":"vendor.vendor",
+        "pk":15,
+        "fields":{
+           "name":"NOP Electronics",
+           "contact_details":"contact@nopelectronics.com",
+           "address":"678 Pine Avenue, Mountainville, USA",
+           "vendor_code":"VENDOR015",
+           "on_time_delivery_rate":0.0,
+           "quality_rating_avg":0.0,
+           "average_response_time":0.0,
+           "fulfillment_rate":0.0
+        }
+     },
+     {
+        "model":"vendor.vendor",
+        "pk":16,
+        "fields":{
+           "name":"QRS Solutions",
+           "contact_details":"info@qrssolutions.com",
+           "address":"901 Birch Lane, Hillside, USA",
+           "vendor_code":"VENDOR016",
+           "on_time_delivery_rate":0.0,
+           "quality_rating_avg":0.0,
+           "average_response_time":0.0,
+           "fulfillment_rate":0.0
+        }
+     },
+     {
+        "model":"vendor.vendor",
+        "pk":17,
+        "fields":{
+           "name":"TUV Technologies",
+           "contact_details":"support@tuvtech.com",
+           "address":"345 Elm Road, Plainville, USA",
+           "vendor_code":"VENDOR017",
+           "on_time_delivery_rate":0.0,
+           "quality_rating_avg":0.0,
+           "average_response_time":0.0,
+           "fulfillment_rate":0.0
+        }
+     },
+     {
+        "model":"vendor.vendor",
+        "pk":18,
+        "fields":{
+           "name":"VWX Supplies",
+           "contact_details":"info@vwxsupplies.com",
+           "address":"678 Oak Lane, Riverdale, USA",
+           "vendor_code":"VENDOR018",
+           "on_time_delivery_rate":0.0,
+           "quality_rating_avg":0.0,
+           "average_response_time":0.0,
+           "fulfillment_rate":0.0
+        }
+     },
+     {
+        "model":"vendor.vendor",
+        "pk":19,
+        "fields":{
+           "name":"YZA Electronics",
+           "contact_details":"contact@yzaelectronics.com",
+           "address":"901 Cedar Avenue, Mountainview, USA",
+           "vendor_code":"VENDOR019",
+           "on_time_delivery_rate":0.0,
+           "quality_rating_avg":0.0,
+           "average_response_time":0.0,
+           "fulfillment_rate":0.0
+        }
+     },
+     {
+        "model":"vendor.vendor",
+        "pk":20,
+        "fields":{
+           "name":"BCD Solutions",
+           "contact_details":"info@bcdsolutions.com",
+           "address":"345 Pine Lane, Hilltop, USA",
+           "vendor_code":"VENDOR020",
+           "on_time_delivery_rate":0.0,
+           "quality_rating_avg":0.0,
+           "average_response_time":0.0,
+           "fulfillment_rate":0.0
+        }
+    }     
+]

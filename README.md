@@ -56,3 +56,22 @@ Now Run Project:
 ```
 
 Now Check the browser: http://localhost:8000/auth/login/
+
+## Setup optional sample data load
+
+if we need to dump dummy data for VENDOR use this command:
+
+```sh
+(venv)$ cd vms
+(venv)$ python manage.py loaddata vendor.json
+```
+
+
+## Test Case done for developed API Endpoint by using Django Rest Framework:
+
+using this command to test the endpoint working as expected.
+
+```sh
+(venv)$ cd vms
+(venv)$ python manage.py test
+```
