@@ -180,9 +180,81 @@ using this command to test the endpoint working as expected.
    - Parameters:
      - None required for GET request.
      - For POST request, include a JSON object representing the new purchase order.
+        ```sh
+        {
+            "po_number": "PO001",
+            "vendor": 1,
+            "delivery_datetime": "2024-05-15T10:00:00",
+            "items": [
+                {
+                    "name": "Product A",
+                    "quantity": 100,
+                    "unit_price": 10.99
+                },
+                {
+                    "name": "Product B",
+                    "quantity": 50,
+                    "unit_price": 20.50
+                }
+            ],
+            "status": "Pending",
+            "quantity": 150,
+            "quality_rating": null
+        }
+        ```
    - Response:
      - GET: Returns a list of existing purchase orders in JSON format.
+        ```sh
+        [
+            {
+                "id": 1,
+                "po_number": "PO001",
+                "order_date": "2024-04-30T05:31:12.258889Z",
+                "delivery_date": "2024-05-15T10:00:00Z",
+                "items": [
+                    {
+                        "name": "Product A",
+                        "quantity": 100,
+                        "unit_price": 10.99
+                    },
+                    {
+                        "name": "Product B",
+                        "quantity": 50,
+                        "unit_price": 20.5
+                    }
+                ],
+                "quantity": 150,
+                "status": "pending",
+                "quality_rating": null,
+                "issue_date": "2024-04-30T05:31:12.258908Z",
+                "acknowledgment_date": null,
+                "vendor": 1
+            }
+        ]
+        ```
      - POST: Returns the newly created purchase order in JSON format with status code 201 (Created).
+        ```sh
+        {
+            "po_number": "PO001",
+            "vendor": 1,
+            "delivery_date": "2024-05-15T10:00:00Z",
+            "items": [
+                {
+                    "name": "Product A",
+                    "quantity": 100,
+                    "unit_price": 10.99
+                },
+                {
+                    "name": "Product B",
+                    "quantity": 50,
+                    "unit_price": 20.5
+                }
+            ],
+            "quantity": 150,
+            "status": "pending",
+            "quality_rating": null
+        }
+        ```
 
 4. **Purchase Order Detail Endpoint**
    - URL: `/api/purchase_orders/<int:pk>/`
@@ -192,7 +264,80 @@ using this command to test the endpoint working as expected.
      - `pk`: Primary key of the purchase order (integer) in the URL path.
    - Response:
      - GET: Returns the details of the specified purchase order in JSON format.
+        ```sh
+        {
+            "po_number": "PO001",
+            "vendor": 1,
+            "delivery_date": "2024-05-15T10:00:00Z",
+            "items": [
+                {
+                    "name": "Product A",
+                    "quantity": 100,
+                    "unit_price": 10.99
+                },
+                {
+                    "name": "Product B",
+                    "quantity": 50,
+                    "unit_price": 20.5
+                }
+            ],
+            "quantity": 150,
+            "status": "pending",
+            "quality_rating": null
+        }
+        ```
      - PUT: Updates the details of the specified purchase order and returns the updated purchase order in JSON format.
+        - Before:
+            ```sh
+            {
+                "po_number": "PO001",
+                "vendor": 1,
+                "delivery_date": "2024-05-15T10:00:00Z",
+                "items": [
+                    {
+                        "name": "Product A",
+                        "quantity": 100,
+                        "unit_price": 10.99
+                    },
+                    {
+                        "name": "Product B",
+                        "quantity": 50,
+                        "unit_price": 20.5
+                    }
+                ],
+                "quantity": 150,
+                "status": "pending",
+                "quality_rating": null
+            }
+            ```
+        - After:
+            ```sh
+            {
+                "po_number": "PO001",
+                "vendor": 1,
+                "delivery_date": "2024-05-15T10:00:00Z",
+                "items": [
+                    {
+                        "name": "Product A",
+                        "quantity": 100,
+                        "unit_price": 10.99
+                    },
+                    {
+                        "name": "Product B",
+                        "quantity": 50,
+                        "unit_price": 20.5
+                    },
+                    {
+                        "name": "Product C",
+                        "quantity": 50,
+                        "unit_price": 20.5
+                    }
+                ],
+                "quantity": 200,
+                "status": "pending",
+                "quality_rating": 4.3
+            }
+            ```
      - DELETE: Deletes the specified purchase order and returns status code 204 (No Content).
 
 5. **Vendor Performance Endpoint**
@@ -202,6 +347,16 @@ using this command to test the endpoint working as expected.
    - Parameters:
      - `vendor_id`: ID of the vendor (integer) in the URL path.
    - Response: Returns the performance metrics of the specified vendor in JSON format.
+   ```sh
+    {
+        "id": 1,
+        "name": "RRT Electronics",
+        "on_time_delivery_rate": 0.0,
+        "quality_rating_avg": 0.0,
+        "average_response_time": 0.0,
+        "fulfillment_rate": 0.0
+    }
+   ```
 
 6. **Acknowledge Purchase Order Endpoint**
    - URL: `/api/purchase_orders/<int:po_id>/acknowledge/`
@@ -210,5 +365,10 @@ using this command to test the endpoint working as expected.
    - Parameters:
      - `po_id`: ID of the purchase order (integer) in the URL path.
    - Response: Returns status code 200 (OK) upon successful acknowledgment of the purchase order.
+   ```sh
+    {
+        "message": "Purchase order acknowledged successfully."
+    }
+   ```
 
 These endpoints provide a comprehensive set of functionalities for managing vendors, purchase orders, and their related operations.
