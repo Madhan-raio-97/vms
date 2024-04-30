@@ -78,7 +78,7 @@ using this command to test the endpoint working as expected.
 ```
 
 
-Documentation for each of the API endpoints:
+## Documentation for each of the API endpoints:
 
 1. **Vendor List and Create Endpoint**
    - URL: `/api/vendors/`
@@ -142,7 +142,35 @@ Documentation for each of the API endpoints:
      - `vendor_id`: ID of the vendor (integer) in the URL path.
    - Response:
      - GET: Returns the details of the specified vendor in JSON format.
+        ```sh
+        {
+            "id": 1,
+            "name": "ABC Electronics",
+            "contact_details": "contact@abcelectronics.com",
+            "address": "123 Main Street, Cityville, USA",
+            "vendor_code": "VENDOR001"
+        }
+        ```
      - PUT: Updates the details of the specified vendor and returns the updated vendor in JSON format.
+        - Before:
+        ```sh
+        {
+            "id": 1,
+            "name": "ABC Electronics",
+            "contact_details": "contact@abcelectronics.com",
+            "address": "123 Main Street, Cityville, USA",
+            "vendor_code": "VENDOR001"
+        }
+        ```
+        - After:
+        ```sh
+        {
+        "id": 1,
+        "name": "RRT Electronics",
+        "contact_details": "contact@rrtelectronics.com",
+        "address": "854 Main Street, Cityville, USA",
+        "vendor_code": "VENDOR001"
+        }
      - DELETE: Deletes the specified vendor and returns status code 204 (No Content).
 
 3. **Purchase Order List and Create Endpoint**
